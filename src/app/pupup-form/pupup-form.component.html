@@ -1,0 +1,48 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">   
+    <div class="w-55-p">
+    <div class="mat-card mat-elevation-z4 p-12 mr-24" fxFlex="50" style="height: 434px;
+    width: 757px;">  
+<div fxFlex class="h2 font-weight-900 " style="text-align: center;"><strong>No of hours worked for the past 15 Days </strong></div>
+<ngx-charts-line-chart
+    [view]=[770,400]
+    [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75','#5AA454', '#A10A28', '#C7B42C', '#AAAAAA','#01579b', '#7aa3e5' ] }"
+    [results]="single"
+    [gradient]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxisLabel]="'Date'"
+    [yAxisLabel]="'No.of Hours'">
+</ngx-charts-line-chart>
+    </div>
+</div>
+
+<div class="w-35-p" style="margin-left: 773px;
+margin-top: -434px;">
+    <div class="mat-card mat-elevation-z4 p-12 mr-24" fxFlex="30" style="height: 434px;
+    width: 700px;">  
+<div fxFlex class="h2 font-weight-900 " style="text-align: center;"><strong>No of hours worked by each employee in this week </strong></div>
+
+<ngx-charts-bar-vertical-stacked
+  [view]=[700,350]
+  [scheme]="{
+    domain: ['#5AA454', '#C7B42C', '#AAAAAA','#30E07B', '#E75691', '#00C0FF', '#5D6A75']
+  }"
+  [results]="single1"
+  [gradient]="false"
+  [xAxis]="true"
+  [yAxis]="true"
+  [legend]="true"
+  [showXAxisLabel]="true"
+  [showYAxisLabel]="true"
+  [xAxisLabel]="'Days'"
+  [yAxisLabel]="'No.of hours worked'"
+  [animations]="true"
+  >
+</ngx-charts-bar-vertical-stacked>
+    </div>
+</div>
+    
+</div>
